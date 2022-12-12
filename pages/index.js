@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Stack, { onEntryChange } from "../utils";
-import { htmlToJson } from "@contentstack/json-rte-serializer";
+import { jsonToHtml } from "@contentstack/json-rte-serializer";
 
-function InformationCard() {
+function InformationCard({data}) {
+  console.log(data)
+  const temp = jsonToHtml(data.information_card.summary)
   return (
     <bw-information-area-template className="bw-information-area-block bw-information-area-template ng-star-inserted">
       <bw-information-card-wrapper className="bw-information-card-wrapper ng-star-inserted">
@@ -72,7 +74,7 @@ function InformationCard() {
                       <bw-information-title className="ng-star-inserted">
                         <span className="bw-information-section-card__card-title bwc-o-title">
                           <rjf-title className="bw-rjf-title ng-star-inserted">
-                            <span>Preparing your hand and checked baggage</span>
+                            <span>{data.information_card.title}</span>
                           </rjf-title>
                         </span>
                       </bw-information-title>
@@ -82,8 +84,7 @@ function InformationCard() {
                         <div className="bw-information-section__content-container">
                           <rjf-paragraph className="bw-rjf-paragraph ng-star-inserted">
                             <p className="bwc-o-body">
-                              Follow our recommendations to pack your bags with
-                              peace of mind.
+                            <div dangerouslySetInnerHTML={{ __html: temp }} />
                             </p>
                           </rjf-paragraph>
                         </div>
@@ -425,7 +426,9 @@ function InformationCard() {
   );
 }
 
-function InformationText() {
+function InformationText({data}) {
+
+  const temp = jsonToHtml(data.information_text.rich_text);
   return (
     <bw-information-highlight-template className="bw-information-section bw-information-highlight-template__full-width ng-star-inserted">
       <bwc-highlight-block className="bw-information-highlight-template__block bwc-highlight-block bwc-highlight-block--yellow">
@@ -435,13 +438,7 @@ function InformationText() {
               <div className="bw-information-section__content-container">
                 <rjf-paragraph className="bw-rjf-paragraph ng-star-inserted">
                   <p className="bwc-o-body">
-                    <span className="bwc-o-body-variant">
-                      Important: soft plastic bags and bags wrapped in
-                      rudimentary materials (e.g., household stretch film) are
-                      not accepted.
-                    </span>
-                    This type of packaging damages airport facilities and
-                    disrupts the flow of baggage.
+                  <div dangerouslySetInnerHTML={{ __html: temp }} />
                   </p>
                 </rjf-paragraph>
               </div>
@@ -453,8 +450,8 @@ function InformationText() {
   );
 }
 
-function RichText({data}) {
-  console.log(data)
+function RichText({ data }) {
+  const temp = jsonToHtml(data.rich_text.rich_text);
   return (
     <bw-information-section-template className="bw-information-section bw-information-section--full-width ng-star-inserted">
       <div>
@@ -463,8 +460,7 @@ function RichText({data}) {
             <p className="bwc-o-subheading ng-star-inserted">
               <rjf-title className="bw-rjf-title">
                 <span>
-                  Travel ready. Get the answers to your baggage questions right
-                  here.
+                  <div dangerouslySetInnerHTML={{ __html: temp }} />
                 </span>
               </rjf-title>
             </p>
@@ -516,8 +512,6 @@ export default function Home() {
   if (!data.entry) {
     return <div className="App">Loading...</div>;
   }
-
-
 
   return (
     <div>
@@ -717,10 +711,10 @@ export default function Home() {
                                     return <RichText key={i.title} data={i} />;
                                   }
                                   if (i.hasOwnProperty("information_text")) {
-                                    return <InformationText key={i.title} />;
+                                    return <InformationText key={i.title} data={i}/>;
                                   }
                                   if (i.hasOwnProperty("information_card")) {
-                                    return <InformationCard key={i.title} />;
+                                    return <InformationCard key={i.title} data={i} />;
                                   }
                                 })}
                               </bw-information-area-template>
