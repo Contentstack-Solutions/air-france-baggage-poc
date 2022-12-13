@@ -476,7 +476,6 @@ bw-information-nba .bw-information-nba-template{margin:16px 0;}
 @media (max-width:599px){
 .bw-ubc-information .bwc-page-layout__medium{padding:0;}
 }
-/*! CSS Used from: https://wwws.airfrance.fr/assets/css/af-print.fd3cb842ebe6a390d5fa4cd6acbd5a42fea7fef9.css ; media=print */
 @media print{
 .bwc .mat-button,.bwc .mat-icon-button,.bwc .mat-raised-button{font-family:ExcellenceInMotion,Helvetica Neue,sans-serif;font-size:14px;font-weight:500;}
 .bwc .mat-card{font-family:ExcellenceInMotion,Helvetica Neue,sans-serif;}
@@ -510,21 +509,21 @@ img{-webkit-print-color-adjust:exact;color-adjust:exact;}
 .bwc-legal-footer{display:none!important;}
 }
 }
-/*! CSS Used from: Embedded */
+
 .mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden;}
 .mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden;}
 .mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto;}
 .mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0);}
 .mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch;}
 .mat-sidenav-fixed{position:fixed;}
-/*! CSS Used from: Embedded */
+
 [_nghost-server-app-c133]{display:block;will-change:height;overflow:hidden;line-height:0;flex-grow:0;flex-shrink:0;}
-/*! CSS Used from: Embedded */
+
 .mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap;}
-/*! CSS Used from: Embedded */
+
 [_nghost-server-app-c46]{display:inline-block;}
 [_nghost-server-app-c46]   img[_ngcontent-server-app-c46]{display:inline-block;}
-/*! CSS Used from: Embedded */
+
 .mat-list-base{padding-top:8px;display:block;-webkit-tap-highlight-color:transparent;}
 .mat-list-base .mat-list-item{display:block;height:48px;-webkit-tap-highlight-color:transparent;width:100%;padding:0;}
 .mat-list-base .mat-list-item .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit;}
@@ -536,7 +535,7 @@ img{-webkit-print-color-adjust:exact;color-adjust:exact;}
 @media (hover: none){
 .mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover{background:none;}
 }
-/*! CSS Used from: Embedded */
+
 .mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0;}
 .mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04;}
 @media (hover: none){
@@ -554,9 +553,9 @@ img{-webkit-print-color-adjust:exact;color-adjust:exact;}
 .mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1);}
 .mat-button-ripple-round{border-radius:50%;z-index:1;}
 .mat-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*{vertical-align:middle;}
-/*! CSS Used from: Embedded */
+
 .mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px;}
-/*! CSS Used from: Embedded */
+
 .mat-card{transition:box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);display:block;position:relative;padding:16px;border-radius:4px;}
 .mat-card-actions,.mat-card-content{display:block;margin-bottom:16px;}
 .mat-card-actions{margin-left:-8px;margin-right:-8px;padding:8px 0;}
@@ -566,29 +565,43 @@ img{-webkit-print-color-adjust:exact;color-adjust:exact;}
 .mat-card>:last-child:not(.mat-card-footer),.mat-card-content>:last-child:not(.mat-card-footer){margin-bottom:0;}
 .mat-card-image:first-child{margin-top:-16px;border-top-left-radius:inherit;border-top-right-radius:inherit;}
 .mat-card>.mat-card-actions:last-child{margin-bottom:-8px;padding-bottom:0;}
-/*! CSS Used from: Embedded */
+
 [_nghost-server-app-c150]{display:block;position:relative;}
 [_nghost-server-app-c150]   .bwc-content-image[_ngcontent-server-app-c150]{width:100%;-o-object-fit:cover;object-fit:cover;}
-/*! CSS Used from: Embedded */
+
 [_nghost-server-app-c151]{display:block;}
 [_nghost-server-app-c151]   .bwc-hero-image[_ngcontent-server-app-c151]{display:block;width:100%;}
 [_nghost-server-app-c151]   .bwc-hero-image--content-image[_ngcontent-server-app-c151]{height:auto;-o-object-fit:cover;object-fit:cover;}
-/*! CSS Used from: Embedded ; media=print */
+
 @media print{
 .usabilla_live_button_container{display:none;}
 }
-/*! CSS Used from: Embedded */
+
 iframe.usabilla-live-button#usabilla_live_button_container_iframe720834757{width:30px;height:106px;margin:0;padding:0;border:0;overflow:hidden;z-index:9998;position:absolute;left:0;top:0;box-shadow:0 0 0;background-color:transparent;}
-/*! CSS Used from: Embedded */
+
 .embeddedServiceHelpButton .uiButton{font-weight:700;font-size:16px;margin:2px 3px;padding:3px 5px;min-width:3em;max-width:12em;text-decoration:none;text-align:center;border:0;background:#dddfe1;}
 .embeddedServiceHelpButton .helpButton .uiButton{display:flex;flex-direction:row;justify-content:center;align-items:center;padding:25px;isolation:isolate;position:absolute;width:50px;height:50px;left:-143px;top:-43px;background:#051039;box-shadow:0 0 8px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.24);border-radius:39px;}
 .embeddedServiceHelpButton .helpButton .uiButton .embeddedServiceIcon{font-family:"embeddedserviceiconfont";font-size:2.05em;content:attr(data-icon);speak:none;text-rendering:auto;font-weight:400;font-variant:normal;text-transform:none;padding-left:10px;}
 .embeddedServiceHelpButton .uiButton .helpButtonLabel{position:absolute;width:10px;height:9px;left:calc(90% - 16px/2);top:calc(20% - 16px/2);background:linear-gradient(33.23deg,#56B36A 16.8%,#6CEA88 95.05%);border-radius:10px;text:linear-gradient(33.23deg,#56B36A 16.8%,#6CEA88 95.05%);}
 .embeddedServiceHelpButton .helpButton .uiButton:focus{outline:1px solid #051039;}
-/*! CSS Used from: Embedded */
+
 div.usabilla_live_button_container#usabilla_live_button_container_649081883[role="button"]{right:0px;top:50%;margin-top:-53px;position:fixed;width:30px;height:106px;z-index:999;}
-/*! CSS Used fontfaces */
+
 @font-face{font-family:ExcellenceInMotion;font-style:normal;font-weight:700;font-display:swap;src:local("0"),url(https://wwws.airfrance.fr/assets/components/28.4.0/af/fonts/ExcellenceInMotionScreen-Bold.woff) format("woff");}
 @font-face{font-family:ExcellenceInMotion;font-style:normal;font-weight:400;font-display:swap;src:local("0"),url(https://wwws.airfrance.fr/assets/components/28.4.0/af/fonts/ExcellenceInMotionScreen-Regular.woff) format("woff");}
 @font-face{font-family:ExcellenceInMotion;font-style:normal;font-weight:700;font-display:swap;src:local("0"),url(https://wwws.airfrance.fr/assets/components/28.4.0/af/fonts/ExcellenceInMotionScreen-Bold.woff) format("woff");}
 @font-face{font-family:ExcellenceInMotion;font-style:normal;font-weight:400;font-display:swap;src:local("0"),url(https://wwws.airfrance.fr/assets/components/28.4.0/af/fonts/ExcellenceInMotionScreen-Regular.woff) format("woff");}
+
+.Important {
+    padding: 1.25rem 1.5rem;
+    background-color: rgb(255, 245, 224)!important;
+}
+.Warning {
+    padding: 1.25rem 1.5rem;
+    background-color: rgb(255, 205, 205)!important;
+}
+
+.nav {
+    margin: auto 0;
+
+}

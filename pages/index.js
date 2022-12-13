@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Stack, { onEntryChange } from "../utils";
 import { jsonToHtml } from "@contentstack/json-rte-serializer";
+import Nav from "../components/Nav";
 
 function InformationCard({data}) {
   console.log(data)
@@ -427,12 +428,12 @@ function InformationCard({data}) {
 }
 
 function InformationText({data}) {
-
+console.log(data.information_text.type)
   const temp = jsonToHtml(data.information_text.rich_text);
   return (
     <bw-information-highlight-template className="bw-information-section bw-information-highlight-template__full-width ng-star-inserted">
       <bwc-highlight-block className="bw-information-highlight-template__block bwc-highlight-block bwc-highlight-block--yellow">
-        <section>
+        <section className={data.information_text.type}>
           <bw-information-section-template className="bw-information-section bw-information-section--full-width">
             <div>
               <div className="bw-information-section__content-container">
@@ -453,7 +454,7 @@ function InformationText({data}) {
 function RichText({ data }) {
   const temp = jsonToHtml(data.rich_text.rich_text);
   return (
-    <bw-information-section-template className="bw-information-section bw-information-section--full-width ng-star-inserted">
+    <bw-information-section-template className="bw-information-section bw-information-section--full-width ng-star-inserted yellow">
       <div>
         <div className="bw-information-section__content-container">
           <rjf-heading className="bw-rjf-heading ng-star-inserted">
@@ -515,7 +516,7 @@ export default function Home() {
 
   return (
     <div>
-      <link rel="stylesheet" href="/globas.css" />
+      <img className="nav" src='./nav.png' />
       <bw-app ng-version="12.2.16" className="bw-ubc-information">
         <bwc-page-template cdkmonitorsubtreefocus>
           <mat-sidenav-container className="mat-drawer-container mat-sidenav-container bwc-page-template__container">
